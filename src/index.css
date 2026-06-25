@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FFF8EE;
+  --color-paper-dim: #F5EDDC;
+  --color-ink: #1A2E22;
+  --color-ink-soft: #2D4536;
+  --color-saffron: #D9622B;
+  --color-saffron-deep: #B84F1F;
+  --color-sage: #3D6B4F;
+  --color-sage-light: #6B9277;
+  --color-taupe: #8B7355;
+  --color-alert: #C73E3E;
+  --color-alert-bg: #FBEAEA;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.raah-line {
+  background-image: radial-gradient(circle, var(--color-taupe) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+::selection {
+  background-color: var(--color-saffron);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-saffron);
+  outline-offset: 2px;
+}
